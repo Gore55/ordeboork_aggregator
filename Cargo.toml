@@ -1,0 +1,21 @@
+[package]
+name = "orderbook_aggregator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio-tungstenite = { version = "*", features = ["native-tls"] }
+eframe = "*"
+tonic = "*"
+tokio = { version = "1.*", features = ["full"] }
+futures = "*"
+prost = "0.11"
+tokio-stream = { version = "*", features = ["sync"] }
+url = "2.3.1"
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+
+[build-dependencies]
+tonic-build = "0.9"
